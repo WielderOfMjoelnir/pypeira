@@ -1,0 +1,8 @@
+setup.py
+pypeira/__init__.py
+pypeira/pypeira.py
+pypeira.egg-info/PKG-INFO
+pypeira.egg-info/SOURCES.txt
+pypeira.egg-info/dependency_links.txt
+pypeira.egg-info/requires.txt
+pypeira.egg-info/top_level.txt
