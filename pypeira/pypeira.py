@@ -1,7 +1,7 @@
 import numpy as np
 import warnings
 
-import io.fits as fits
+import pypeira.io.fits as fits
 
 
 class IRA(object):

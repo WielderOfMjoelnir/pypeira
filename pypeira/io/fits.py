@@ -59,8 +59,10 @@ def read_hdu(fname, ext=0):
 
 
 def read_folder(dir, type='bcd'):
+    # TODO: Assertions and stuff for dir
     # Reads an entire folder of specificed file types
-    hdus = [fitsio.FITS(os.path.join(dir, f)) for f in os.listdir(dir)
-            if f.split('_')[-1][:-5] == type and f[-5:] == '.fits']
+    fnames = [f for f in os.listdir(dir) if f.split('_')[-1][:-5] == type and f[-5:] == '.fits']
+
+    hdus = [fitsio.FITS(os.path.join(dir, f)) for f in fnames]
 
     return hdus
