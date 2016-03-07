@@ -48,9 +48,9 @@ def read_hdu(fname, ext=0):
     The random groups format should not be used for other types of applications.
     .. [REF] fits.gsfc.nasa.gov/fits_primer.html
 
-    :param fname:
-    :param ext:
-    :return:
+    :param fname: Filename of the FITS file you want to read.
+    :param ext: Specify if the FITS has any extensions.
+    :return: A fitsio.FITS object.
     """
 
     fits = fitsio.FITS(fname)
@@ -62,6 +62,8 @@ def read_folder(dir, type='bcd'):
     # TODO: Assertions and stuff for dir
     # Reads an entire folder of specificed file types
     fnames = [f for f in os.listdir(dir) if f.split('_')[-1][:-5] == type and f[-5:] == '.fits']
+
+    print fnames
 
     hdus = [fitsio.FITS(os.path.join(dir, f)) for f in fnames]
 
