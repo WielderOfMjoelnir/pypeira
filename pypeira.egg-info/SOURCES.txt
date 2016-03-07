@@ -6,3 +6,7 @@ pypeira.egg-info/SOURCES.txt
 pypeira.egg-info/dependency_links.txt
 pypeira.egg-info/requires.txt
 pypeira.egg-info/top_level.txt
+pypeira/background/__init__.py
+pypeira/centroids/__init__.py
+pypeira/io/__init__.py
+pypeira/io/fits.py

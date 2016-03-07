@@ -59,7 +59,7 @@ setup(
     author_email='tor.github@gmail.com',
     description='',
     long_description=long_description,
-    packages=['pypeira'],
+    packages=find_packages(),
     include_package_data=True,
     platforms='any',
     test_suite='pypeira.test.test_pypeira',
