@@ -1,7 +1,7 @@
 import numpy as np
 import warnings
 
-import io
+import io.fits as fits2
 import core.brightness
 
 
@@ -20,7 +20,7 @@ class IRA(object):
             self.header_kwds = list()
 
     def read_header(self, fname):
-        head = io.fits.read_headers(fname)
+        head = fits2.read_headers(fname)
 
         for h in self.header_kwds:
             self.header[h] = head[h]
@@ -28,7 +28,7 @@ class IRA(object):
         return self.header
 
     def read_folder(self, dir, type='bcd'):
-        return io.fits.read_folder(dir, type)
+        return fits2.read_folder(dir, type)
 
     @staticmethod
     def get_brightest(fits):
