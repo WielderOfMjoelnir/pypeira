@@ -1,7 +1,8 @@
 import numpy as np
 import warnings
 
-import io.fits as fits
+import io
+import core.brightness
 
 
 class IRA(object):
@@ -19,7 +20,7 @@ class IRA(object):
             self.header_kwds = list()
 
     def read_header(self, fname):
-        head = fits.read_headers(fname)
+        head = io.fits.read_headers(fname)
 
         for h in self.header_kwds:
             self.header[h] = head[h]
@@ -27,4 +28,29 @@ class IRA(object):
         return self.header
 
     def read_folder(self, dir, type='bcd'):
-        return fits.read_folder(dir, type)
+        return io.fits.read_folder(dir, type)
+
+    @staticmethod
+    def get_brightest(fits):
+        """
+
+        :param fits: FITS object,
+        Containing Image_HDU's which can be accessed by indices.
+        :return: (idx, max_brightness),
+        Where idx are the indices of the brightest pixel, and max_brightness the maximum brightness of the pixel.
+        """
+        # Instatiate variables
+        max_bright = 0
+        idx = 0
+
+        # Iterate through the hdus in the FITS object
+        for hdu in fits:
+            # Read image data from HDU
+            pxls = hdu[0].read()
+
+            curr_idx, curr_bright = core.brightness.get_max(pxls)
+
+            if curr_bright > max_bright:
+                max_bright = curr_bright
+
+        return idx, max_bright

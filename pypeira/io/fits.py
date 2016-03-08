@@ -63,8 +63,6 @@ def read_folder(dir, type='bcd'):
     # Reads an entire folder of specificed file types
     fnames = [f for f in os.listdir(dir) if f.split('_')[-1][:-5] == type and f[-5:] == '.fits']
 
-    print fnames
-
     hdus = [fitsio.FITS(os.path.join(dir, f)) for f in fnames]
 
     return hdus
