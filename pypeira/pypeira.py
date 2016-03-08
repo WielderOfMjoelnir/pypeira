@@ -3,6 +3,7 @@ import warnings
 
 import io.fits as fits2
 import core.brightness
+import core.time
 
 
 class IRA(object):
@@ -20,6 +21,7 @@ class IRA(object):
             self.header_kwds = list()
 
     def read_header(self, fname):
+        # TODO: Fix the import io.fits problem!
         head = fits2.read_headers(fname)
 
         for h in self.header_kwds:
@@ -27,30 +29,21 @@ class IRA(object):
 
         return self.header
 
+    @staticmethod
     def read_folder(self, dir, type='bcd'):
         return fits2.read_folder(dir, type)
 
     @staticmethod
     def get_brightest(fits):
-        """
+        return core.brightness.get_brightest(fits)
 
-        :param fits: FITS object,
-        Containing Image_HDU's which can be accessed by indices.
-        :return: (idx, max_brightness),
-        Where idx are the indices of the brightest pixel, and max_brightness the maximum brightness of the pixel.
-        """
-        # Instatiate variables
-        max_bright = 0
-        idx = 0
+    @staticmethod
+    def data_for_pixel(idx, fits):
+        # Get data for a specific pixel
+        # TODO: Should experiment with different ways of doing this
+        pxl_data = [hdu[0].read()[idx[0], idx[1], idx[2]]
+                    for hdu in fits]
 
-        # Iterate through the hdus in the FITS object
-        for hdu in fits:
-            # Read image data from HDU
-            pxls = hdu[0].read()
+        return core.time.to_timeseries(pxl_data)
 
-            curr_idx, curr_bright = core.brightness.get_max(pxls)
 
-            if curr_bright > max_bright:
-                max_bright = curr_bright
-
-        return idx, max_bright

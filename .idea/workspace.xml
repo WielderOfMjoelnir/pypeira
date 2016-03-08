@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10d086ac-3188-4f8c-95c9-a4d8e8a02b31" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pypeira/core/time.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypeira.egg-info/SOURCES.txt" afterPath="$PROJECT_DIR$/pypeira.egg-info/SOURCES.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypeira/core/brightness.py" afterPath="$PROJECT_DIR$/pypeira/core/brightness.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypeira/pypeira.py" afterPath="$PROJECT_DIR$/pypeira/pypeira.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
     </list>
     <ignored path="pypeira.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +36,21 @@
           <file leaf-file-name="pypeira.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pypeira/pypeira.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.70866144">
-                  <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+                <state vertical-scroll-proportion="0.8110236">
+                  <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="time.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pypeira/core/time.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -57,7 +69,7 @@
             <entry file="file://$PROJECT_DIR$/setup.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="61" column="81" selection-start-line="61" selection-start-column="81" selection-end-line="61" selection-end-column="81" />
+                  <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
                   <folding>
                     <element signature="e#0#37#0" expanded="true" />
                   </folding>
@@ -84,8 +96,8 @@
           <file leaf-file-name="brightness.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pypeira/core/brightness.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.496063">
-                  <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.88188976">
+                  <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -108,9 +120,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/pypeira/io/fits.py" />
         <option value="$PROJECT_DIR$/pypeira/core/brightness.py" />
+        <option value="$PROJECT_DIR$/pypeira/core/time.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/pypeira/pypeira.py" />
       </list>
     </option>
@@ -516,7 +529,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457396103535</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Temp change for a bug in importing io.fits">
+      <created>1457396388247</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1457396388247</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -568,7 +587,8 @@
     <MESSAGE value="Changed setup.py to now use find_packages()." />
     <MESSAGE value="Testing" />
     <MESSAGE value="Added a get_brightness() function to IRA and a helper function get_max() which gets the maximum value and index from a multidimensional numpy array." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a get_brightness() function to IRA and a helper function get_max() which gets the maximum value and index from a multidimensional numpy array." />
+    <MESSAGE value="Temp change for a bug in importing io.fits" />
+    <option name="LAST_COMMIT_MESSAGE" value="Temp change for a bug in importing io.fits" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -673,16 +693,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="81" selection-start-line="61" selection-start-column="81" selection-end-line="61" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pypeira/io/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -703,16 +713,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pypeira/core/brightness.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.496063">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.88188976">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pypeira/core/time.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pypeira/pypeira.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70866144">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.8110236">
+          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

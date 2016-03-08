@@ -19,3 +19,32 @@ def get_max(data, max_val=0, idx=0):
             max_val = j
 
     return idx, max_val
+
+
+def get_brightest(fits):
+        """
+        Obtains the brightest pixel together with it's indices.
+
+        :param fits: FITS object,
+        Containing Image_HDU's which can be accessed by indices.
+        :return: (idx, max_brightness),
+        Where idx are the indices of the brightest pixel, and max_brightness the maximum brightness of the pixel.
+        """
+        # Instatiate variables
+        max_bright = 0
+        idx = 0
+
+        # Iterate through the hdus in the FITS object
+        for hdu in fits:
+            # Read image data from HDU
+            pxls = hdu[0].read()
+
+            # Hold the current idxs and brightness
+            curr_idx, curr_bright = get_max(pxls)
+
+            # Compare with maximums
+            if curr_bright > max_bright:
+                max_bright = curr_bright
+                idx = curr_idx
+
+        return idx, max_bright

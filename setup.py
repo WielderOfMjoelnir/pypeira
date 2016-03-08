@@ -53,7 +53,8 @@ setup(
     tests_require=['pytest'],
     install_requires=['numpy',
                       'matplotlib',
-                      'fitsio'
+                      'fitsio',
+                      'pandas'
                     ],
     cmdclass={'test': PyTest},
     author_email='tor.github@gmail.com',
