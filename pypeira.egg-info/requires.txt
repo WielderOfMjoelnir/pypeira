@@ -1,6 +1,7 @@
 numpy
 matplotlib
 fitsio
+pandas
 
 [testing]
 pytest

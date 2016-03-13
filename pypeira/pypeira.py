@@ -1,7 +1,6 @@
 import numpy as np
-import warnings
 
-import io.fits as fits2
+from io.common import read as _read
 import core.brightness
 import core.time
 
@@ -13,25 +12,24 @@ class IRA(object):
     def __init__(self, header_kwds=None):
         self.header = dict()
 
-        # Allows the user to set the headers they  want beforehand
+        # Allows the user to set the headers they want beforehand
         if header_kwds:
             self.header_kwds = header_kwds
         else:
             # Should have some default kwds
             self.header_kwds = list()
 
-    def read_header(self, fname):
-        # TODO: Fix the import io.fits problem!
-        head = fits2.read_headers(fname)
-
-        for h in self.header_kwds:
-            self.header[h] = head[h]
-
-        return self.header
+    @staticmethod
+    def read_header(path):
+        return _read(path, headers_only=True)
 
     @staticmethod
-    def read_folder(self, dir, type='bcd'):
-        return fits2.read_folder(dir, type)
+    def read(path):
+        return _read(path)
+
+    @staticmethod
+    def read_dir(path):
+        return _read(path)
 
     @staticmethod
     def get_brightest(fits):
@@ -41,8 +39,18 @@ class IRA(object):
     def data_for_pixel(idx, fits):
         # Get data for a specific pixel
         # TODO: Should experiment with different ways of doing this
-        pxl_data = [hdu[0].read()[idx[0], idx[1], idx[2]]
-                    for hdu in fits]
+        #pxl_data = [hdu[0].read()[idx[0]][idx[1]][idx[2]]
+        #            for hdu in fits]
+        pxl_data = []
+
+        for hdu in fits:
+            hd = hdu[0].read()
+
+            print hdu[0].get_filename()
+
+            print hd[idx[0]][idx[1]][idx[2]]
+
+            pxl_data.append(hd[idx[0]][idx[1]][idx[2]])
 
         return core.time.to_timeseries(pxl_data)
 
