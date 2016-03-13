@@ -4,21 +4,23 @@ import fitsio
 import fits
 
 
-def read_file(path, ftype, headers_only=False, image_only=False, *args, **kwargs):
+def read_file(path, ftype, fits_type=None, headers_only=False, image_only=False, *args, **kwargs):
     data = None
     # Reads a file
     root, ext = os.path.splitext(path)
 
     if ext[1:] == ftype:
         if ftype == "fits":
-            # data will now be a list of FITS objects
-
-            data = fits.read_fits(path, headers_only, image_only, *args, **kwargs)
+            if fits_type is not None:
+                if fits_type == root.split('_')[-1]:
+                    data = fits.read_fits(path, headers_only, image_only, *args, **kwargs)
+            else:
+                data = fits.read_fits(path, headers_only, image_only, *args, **kwargs)
 
     return data
 
 
-def read(path, ftype='fits', fits_type='bcd', walk=True, headers_only=False, image_only=False, *args, **kwargs):
+def read(path, ftype='fits', fits_type=None, walk=True, headers_only=False, image_only=False, *args, **kwargs):
     # TODO: Need to account for the different types of FITS files, i.e. bcd, bimsk, bunc, cov2d, etc.
     """
     Proper description will be written when implementation is more complete.
@@ -87,12 +89,10 @@ def read(path, ftype='fits', fits_type='bcd', walk=True, headers_only=False, ima
     if not os.path.exists(path):
         raise OSError(path)
 
-    print path
-
     # Check if file
     if os.path.isfile(path):
         # Read file
-        data = read_file(path, ftype, headers_only, image_only, *args, **kwargs)
+        data = read_file(path, ftype, fits_type, headers_only, image_only, *args, **kwargs)
 
     # Check if dir
     elif os.path.isdir(path):
@@ -110,7 +110,7 @@ def read(path, ftype='fits', fits_type='bcd', walk=True, headers_only=False, ima
                     # Create path for 'fname'
                     file_path = os.path.join(node[0], fname)
                     # Call read_file() on each 'fname'
-                    file_data = read_file(file_path, ftype, headers_only, image_only, *args, **kwargs)
+                    file_data = read_file(file_path, ftype, fits_type, headers_only, image_only, *args, **kwargs)
 
                     # If read_file() was successful; that is returned not None,
                     # append returned value to 'data' list
@@ -120,7 +120,7 @@ def read(path, ftype='fits', fits_type='bcd', walk=True, headers_only=False, ima
             # Read files from top dir only
             for fname in os.listdir(path):
                 # os.listdir() returns a list of paths as strings for each file in path
-                file_data = read_file(fname, ftype, headers_only, image_only, *args, **kwargs)
+                file_data = read_file(fname, ftype, fits_type, headers_only, image_only, *args, **kwargs)
 
                 # if read_file() was successful, append returned value to 'data' list
                 if file_data is not None:

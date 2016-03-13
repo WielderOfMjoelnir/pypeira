@@ -97,15 +97,3 @@ def read_fits(fname, headers_only=False, image_only=False, *args, **kwargs):
 
     return fits
 
-
-def read_folder(path, type='bcd'):
-    # TODO: Assertions and stuff for dir
-    # Reads an entire folder of specified file types
-    # fnames = [f for f in os.listdir(dir) if f.split('_')[-1][:-5] == type and f[-5:] == '.fits']
-
-    fnames = [f for f in os.listdir(path) if f[-5:] == '.fits']
-
-    hdus = [fitsio.FITS(os.path.join(path, f)) for f in fnames]
-
-    return hdus
-

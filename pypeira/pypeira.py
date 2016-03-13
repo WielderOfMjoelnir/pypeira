@@ -43,12 +43,15 @@ class IRA(object):
         #            for hdu in fits]
         pxl_data = []
 
+        # TODO: This is only temporary, create a nicer sort function.
+        fits.sort(key=lambda x: x._filename.split('_')[-4])
+
         for hdu in fits:
             hd = hdu[0].read()
 
-            print hdu[0].get_filename()
-
-            print hd[idx[0]][idx[1]][idx[2]]
+            # print hdu[0].get_filename()
+            #
+            # print hd[idx[0]][idx[1]][idx[2]]
 
             pxl_data.append(hd[idx[0]][idx[1]][idx[2]])
 
