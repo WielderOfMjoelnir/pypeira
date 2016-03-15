@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10d086ac-3188-4f8c-95c9-a4d8e8a02b31" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tox.ini" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypeira/core/time.py" afterPath="$PROJECT_DIR$/pypeira/core/time.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypeira/pypeira.py" afterPath="$PROJECT_DIR$/pypeira/pypeira.py" />
     </list>
     <ignored path="pypeira.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,10 +30,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.49819493">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="pypeira.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="pypeira.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pypeira/pypeira.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.45496893">
+                <state vertical-scroll-proportion="0.0">
                   <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
@@ -43,10 +42,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="time.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="time.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pypeira/core/time.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
+                <state vertical-scroll-proportion="0.41925466">
                   <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
                   <folding />
                 </state>
@@ -627,7 +626,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458039145073</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added more time options to fits_to_time()">
+      <created>1458039530563</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1458039530563</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -705,23 +710,14 @@
     <MESSAGE value="Created new io module common.py. Contains read() and read_file() function which will be wrappers for all the reading." />
     <MESSAGE value="Added a 'fits_type' keyword to the read functions.&#10;Also made data_for_pixel() sort the FITS files before passing them on." />
     <MESSAGE value="Added unittesting.&#10;Added fits_get_time() in core.time. &#10;Added pixel extracting methods, both general but also for FITS specifically." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added unittesting.&#10;Added fits_get_time() in core.time. &#10;Added pixel extracting methods, both general but also for FITS specifically." />
+    <MESSAGE value="Added more time options to fits_to_time()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more time options to fits_to_time()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pypeira/pypeira.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pypeira/core/time.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1141,14 +1137,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypeira/core/time.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pypeira/core/brightness.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1169,11 +1157,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pypeira/pypeira.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45496893">
+        <state vertical-scroll-proportion="0.0">
           <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tox.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pypeira/core/time.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41925466">
+          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
