@@ -17,6 +17,7 @@ class IRA(object):
     * time steps
     * centroid methods and parameters
     * time format
+    * etc.
 
     """
     ### IMPORTANT ###

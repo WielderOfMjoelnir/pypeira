@@ -23,7 +23,12 @@ def fits_get_time(hdu, time_format='bmjd'):
         sorted.
     """
     format_to_kwrd = {
-        'bmjd': 'BMJD_OBS'
+        'bmjd': 'BMJD_OBS',
+        'hmjd': 'HMJD_OSB',
+        'mjd': 'MJD_OBS',
+        'utc': 'UTCS_OSB',
+        'date': 'DATE_OBS',
+        'dce': 'ET_OBS'
     }
 
     # Read FITS header and return BMJD_OBS
