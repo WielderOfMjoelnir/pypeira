@@ -5,6 +5,35 @@ import fits
 
 
 def read_file(path, ftype, fits_type=None, headers_only=False, image_only=False, *args, **kwargs):
+    """
+    Only reads one file. Main purpose is to be called by read() to read single
+    files.
+
+    Parameters
+    ----------
+    path: str
+        The path of the file you want to read. Unlike read() it does not handle both
+        files and directorys, only files.
+    ftype: str
+        The file type/extension of the file you want to read data from. Unlike read()
+        this argument is required.
+    fits_type: str, optional
+        See read().
+    headers_only: bool, optional
+        See read().
+    image_only: bool, optional
+        See read().
+    *args: optional
+        Contais all arguments that will be passed on to the actual read function, where the
+        reader function used for each file type/extension is as specified above.
+    **kwargs: optional
+        Same as for 'args'. Contains all keyword arguments that will be passed onto the actual
+        reader function, where the reader used for each file type/extension is as specified above.
+
+    Returns
+    -------
+
+    """
     data = None
     # Reads a file
     root, ext = os.path.splitext(path)
@@ -21,7 +50,6 @@ def read_file(path, ftype, fits_type=None, headers_only=False, image_only=False,
 
 
 def read(path, ftype='fits', fits_type=None, walk=True, headers_only=False, image_only=False, *args, **kwargs):
-    # TODO: Need to account for the different types of FITS files, i.e. bcd, bimsk, bunc, cov2d, etc.
     """
     Proper description will be written when implementation is more complete.
 
@@ -36,6 +64,17 @@ def read(path, ftype='fits', fits_type=None, walk=True, headers_only=False, imag
         If file name then it will simply read the data form the given file.
     ftype: str, optional
         The file type/extension of the files you want to read data from. Default is 'fits'.
+    fits_type: str, optional
+        The type of FITS file you want to read. If not None, will filter out all path names not
+        ending in "fits_type.FITS", i.e. if fits_type = 'bcd'
+
+            just_a_test_bcd.FITS
+
+        is a valid, but
+
+            just_a_test.FITS
+
+        is not valid, in this case.
     walk: bool, optional
         Specifies whether or not to walk the directory. If 'path' is not a directory, 'walk'
         affects nothing. Default is True.
@@ -50,6 +89,7 @@ def read(path, ftype='fits', fits_type=None, walk=True, headers_only=False, imag
     **kwargs: optional
         Same as for 'args'. Contains all keyword arguments that will be passed onto the actual
         reader function, where the reader used for each file type/extension is as specified above.
+        (The specification will come later on. For now there's nothing more than fitsio.read())
 
     Returns
     -------
@@ -127,3 +167,53 @@ def read(path, ftype='fits', fits_type=None, walk=True, headers_only=False, imag
                     data.append(file_data)
 
     return data
+
+
+def pixel_data(idx, hdus, zipped=False):
+    """
+    Functions as a wrapper for extracting data for a specific pixel for the
+    different HDU formats (currently only using FITS).
+
+    Parameters
+    ----------
+    idx: (int ... )
+        The n-dimensional index of the pixel.
+    hdus: FITS objects (no others for now)
+        An iterable of HDUs which contains the relevant data.
+    zipped: bool, optional
+        Specifies whether or not to return the time and pixel value zipped. That is, if zipped = True
+        then the returned values are in the form
+
+            [(timestamp, pixel_value), ... ]
+
+        while if zipped = False, the returned values will in the form
+
+            [timestamp, ... ], [pixel_value, ... ]
+
+        The reason for this is that for some operations you might want to keep the timestamp
+        and the pixel_value paired together, while in other cases, like when plotting, it's
+        more convenient to have them in two different lists. Note that lists will still
+        have the same order, thus (timestamps[i], pixel_values[i]) for zipped = False is the
+        same as the ith pair if we had zipped = True.
+
+    Returns
+    -------
+    pxl_data: iterable (list for now, might turn into generator if the process turns out to be demanding)
+        The entire set of data for the specified index/pixel in this set of HDUs.
+
+    None
+        If no the file type/extension is not known.
+    """
+    if isinstance(hdus[0], fitsio.fitslib.FITS):
+        # If the first entry is FITS object, then set pxl_data equal to
+        # fits.pixel_data_single() called on each element of hdus together with idx.
+        pxl_data = fits.pixel_data(idx, hdus)
+    else:
+        pxl_data = None
+
+    if not zipped:
+        # This unzips the list of (time, data)-tuples to return the lists times, pxl_values
+        return zip(*pxl_data)
+    else:
+        # Or if zipped is untrue, return the (time, data)-tuples
+        return pxl_data
