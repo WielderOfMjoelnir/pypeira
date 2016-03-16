@@ -15,7 +15,7 @@ Then <code>cd</code> into the project folder and run the command
 
 <pre><code>python setup.py install</code></pre>
 
-You can then import <code>pypeira</code> as you would normally. See usage below.
+You *should* then be able to import <code>pypeira</code> as you normal.
 
 ## Usage
 
