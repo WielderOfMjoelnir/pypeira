@@ -7,7 +7,7 @@ might not be correct. Will change this as soon as I have time.
 
 ### Dependencies
 * numpy >= 1.10.4
-* matplotlib >= 
+* matplotlib >= 1.5.1
 * fitsio >= 0.9.7
 
 ### Usage
