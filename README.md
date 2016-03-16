@@ -11,7 +11,7 @@ First clone the project
 
 <pre><code>git https://github.com/WielderOfMjoelnir/pypeira.git</code></pre>
 
-Then <code>cd</cd> into the project folder and run the command
+Then <code>cd</code> into the project folder and run the command
 
 <pre><code>python setup.py install</code></pre>
 
