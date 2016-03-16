@@ -2,7 +2,7 @@ from __future__ import print_function
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 import io
-import codecs
+import encodings
 import os
 import sys
 
@@ -30,18 +30,28 @@ def read(*filenames, **kwargs):
 
 
 long_description = read('README.md') # TODO: Add 'CHANGES.md'
+#long_description = ""
 
 
-class PyTest(TestCommand):
-    user_options = [('pytest-args=', 'a', "Arguments to pass to py.test")]
+class ToxTest(TestCommand):
+    user_options = [('tox-args=', 'a', "Arguments to pass to tox")]
 
     def initialize_options(self):
         TestCommand.initialize_options(self)
-        self.pytest_args = []
+        self.tox_args = []
+
+    def finalize_options(self):
+        TestCommand.finalize_options(self)
+        self.test_args = []
+        self.test_suite = True
 
     def run_test(self):
-        import pytest
-        errno = pytest.main(self.pytest_args)
+        import tox
+        import shlex
+        args = self.tox_args
+        if args:
+            args = shlex.split(self.tox_args)
+        errno = tox.cmdline(args=args)
         sys.exit(errno)
 
 
@@ -51,13 +61,13 @@ setup(
     url='http://github.com/WielderOfMjoelnir/pypeira/',
     license='Apache Software License',
     author='Tor Erlend Fjelde',
-    tests_require=['pytest'],
+    tests_require=['tox'],
     install_requires=['numpy',
                       'matplotlib',
                       'fitsio',
                       'pandas'
                     ],
-    cmdclass={'test': PyTest},
+    cmdclass={'test': ToxTest},
     author_email='tor.github@gmail.com',
     description='',
     long_description=long_description,
@@ -65,7 +75,7 @@ setup(
     include_package_data=True,
     platforms='any',
     test_suite='pypeira.test.test_pypeira',
-    classifiers = [
+    classifiers=[
         'Programming Language :: Python',
         'Development Status :: 1 - Planning',
         'Natural Language :: English',
@@ -75,8 +85,5 @@ setup(
         'Operating System :: OS Independent',
         'Topic :: Scientific/Engineering :: Astronomy',
         'Topic :: Scientific/Engineering :: Physics'
-        ],
-    extras_require={
-        'testing': ['pytest'],
-    }
+    ]
 )

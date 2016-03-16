@@ -10,10 +10,11 @@ pypeira/background/__init__.py
 pypeira/centroids/__init__.py
 pypeira/core/__init__.py
 pypeira/core/brightness.py
-pypeira/core/sort.py
+pypeira/core/hdu.py
 pypeira/core/time.py
 pypeira/io/__init__.py
 pypeira/io/common.py
 pypeira/io/fits.py
+pypeira/io/reader.py
 pypeira/test/__init__.py
 pypeira/test/test_pypeira.py

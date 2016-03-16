@@ -1,8 +1,6 @@
 from __future__ import division
 
-import os
 import fitsio
-import pypeira.core.time
 
 """
 A FITS file is comprised of segments called Header/Data Units (HDUs), where the first
@@ -37,30 +35,30 @@ The random groups format should not be used for other types of applications.
 """
 
 
-def read_headers(fname, *args, **kwargs):
+def read_headers(path, *args, **kwargs):
     # Reads the headers from the FITS file
 
-    header = fitsio.read_header(fname, *args, **kwargs)
+    header = fitsio.read_header(path, *args, **kwargs)
 
     return header
 
 
-def read_image(fname, *args, **kwargs):
+def read_image(path, *args, **kwargs):
     # Reads the image data from the FITS file
 
-    data = fitsio.read(fname, *args, **kwargs)
+    data = fitsio.read(path, *args, **kwargs)
 
     return data
 
 
-def read_fits(fname, headers_only=False, image_only=False, *args, **kwargs):
+def read_fits(path, headers_only=False, image_only=False, *args, **kwargs):
     """
     Reader function for the FITS files. Takes advantage of the fitsio
     reader function and thus the fitsio.FITS object.
 
     Parameters
     ----------
-    fname: str
+    path: str
         Path to the FITS file you want to read
     headers_only: bool, optional
         Set to True if you only want to read the headers of the file. If True, the data
@@ -93,52 +91,17 @@ def read_fits(fname, headers_only=False, image_only=False, *args, **kwargs):
         but now the type of the tiles will be numpy.arrays.
     """
     if headers_only:
-        fits = read_headers(fname, *args, **kwargs)
+        hdr = read_headers(path, *args, **kwargs)
+        return hdr
+
     elif image_only:
-        fits = read_image(fname, *args, **kwargs)
+        image = read_image(path, *args, **kwargs)
+        return image
+
     else:
-        fits = fitsio.FITS(fname, *args, **kwargs)
+        hdr = read_headers(path, *args, **kwargs)
+        image = read_image(path, *args, **kwargs)
 
-    return fits
+    return hdr, image
 
-
-def pixel_data(idx, hdus):
-    """
-    Get's the data for the entry at idx in each of the FITS objects in hdus, where hdus
-    is a list of FITS objects.
-
-    Parameters
-    ----------
-    idx: (int ... )
-        The n-dimensional index of the pixel.
-    hdus: FITS objects
-        An iterable over the FITS HDU's which contain the relevant data.
-
-    Returns
-    -------
-
-    """
-    sec_to_day = 1 / (3600 * 24)
-
-    pxl_vals = list()
-    time = list()
-
-    # Sort the HDUs using the Barycenter Mod. Julian Date of the observation as key
-    hdus.sort(key=pypeira.core.time.fits_get_time)
-
-    # Iterate through the HDUs
-    for hdu in hdus:
-        image = hdu[0].read()
-        hdr = hdu[0].read_header()
-
-        framtime = hdr['FRAMTIME']
-        timestamp = hdr['BMJD_OBS']
-        axis3 = hdr['NAXIS3']
-
-        # List of all the the pixel values for this set of images and concatenate
-        pxl_vals += [image[i, idx[0], idx[1]] for i in range(axis3)]
-        # List of all the timestamps, where we add i framtimes to the timestamp
-        time += [(timestamp + (framtime * i * sec_to_day)) for i in range(axis3)]
-
-    return zip(time, pxl_vals)
 

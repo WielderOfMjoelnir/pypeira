@@ -1,10 +1,14 @@
-import numpy as np
+try:
+    from pypeira.io.common import read as _read
+    import pypeira.core.brightness as brightness
+except ImportError:
+    from io.common import read as _read
+    import core.brightness as brightness
 
-from io.common import read as _read
-from io.common import pixel_data as _pixel_data
-import core.brightness
-import core.time
-import core.sort
+import matplotlib.pyplot as plt
+
+from matplotlib import style
+style.use('ggplot')
 
 
 class IRA(object):
@@ -26,7 +30,7 @@ class IRA(object):
     # use for finding centroids, etc.
     # The plan is to use this object as a config, which you can then call functions
     # from, and the functions will use the attributes of this object as arguments.
-    # This way you want have to retype the parameters, etc. every time. That also
+    # This way you won't have to retype the parameters, etc. every time. That also
     # means that the static methods below will not stay static for long, but it's
     # simply temporary as to avoid IDE suggestions about making them static.
 
@@ -37,10 +41,10 @@ class IRA(object):
     # not only for the performance hit as more and more information is acquired,
     # but also because it would disallow use of the methods outside of this class.
     # For the sake of modularity, I think sacrificing some readability that goes
-    # with all the arguments, is worth it.
+    # with all the arguments for the methods is worth it.
 
     _header_kwds_defaults = [
-        'BITPLX',               # Four-byte single precision floating point
+        'BITPIX',               # Four-byte single precision floating point
         'NAXIS',                # Nr. of axes
         'NAXIS1',               # Nr. of rows, Spitzer = 32
         'NAXIS2',               # Nr. of columns, Spitzer = 32
@@ -68,6 +72,7 @@ class IRA(object):
             self.header_kwds = self._header_kwds_defaults
 
     def read_header(self, path, inplace=False):
+        # Stores the values of a set of header keywords on the instance. Doesn't have any uses as of yet.
         headers = _read(path, headers_only=True)
 
         if inplace:
@@ -90,12 +95,20 @@ class IRA(object):
 
     @staticmethod
     def get_brightest(hdus):
-        return core.brightness.get_brightest(hdus)
+        return brightness.get_brightest(hdus)
 
     @staticmethod
     def pixel_data(idx, hdus, zipped=False):
         # Get data for a specific pixel
-        return _pixel_data(idx, hdus, zipped)
+        return brightness.pixel_data(idx, hdus, zipped)
+
+    @staticmethod
+    def plot_brightest(hdus):
+        idx, brightest = brightness.get_brightest(hdus)
+
+        xs, ys = brightness.pixel_data(idx, hdus)
+
+        plt.scatter(xs, ys)
 
 
 

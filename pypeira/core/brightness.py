@@ -1,3 +1,5 @@
+from __future__ import division
+
 import numpy as np
 
 
@@ -56,7 +58,7 @@ def get_brightest(hdus):
     # Iterate through the hdus in the FITS object
     for hdu in hdus:
         # Read image data from HDU
-        pxls = hdu[0].read()
+        pxls = hdu.img
 
         # Hold the current idxs and brightness
         curr_idx, curr_bright = get_max(pxls)
@@ -67,3 +69,67 @@ def get_brightest(hdus):
             idx = curr_idx
 
     return idx, max_bright
+
+
+def pixel_data(idx, hdus, zipped=False):
+    """
+    Functions as a wrapper for extracting data for a specific pixel for the
+    different HDU formats (currently only using FITS).
+
+    Parameters
+    ----------
+    idx: (int ... )
+        The n-dimensional index of the pixel.
+    hdus: FITS objects (no others for now)
+        An iterable of HDUs which contains the relevant data.
+    zipped: bool, optional
+        Specifies whether or not to return the time and pixel value zipped. That is, if zipped = True
+        then the returned values are in the form
+
+            [(timestamp, pixel_value), ... ]
+
+        while if zipped = False, the returned values will in the form
+
+            [timestamp, ... ], [pixel_value, ... ]
+
+        The reason for this is that for some operations you might want to keep the timestamp
+        and the pixel_value paired together, while in other cases, like when plotting, it's
+        more convenient to have them in two different lists. Note that lists will still
+        have the same order, thus (timestamps[i], pixel_values[i]) for zipped = False is the
+        same as the ith pair if we had zipped = True.
+
+    Returns
+    -------
+    pxl_data: iterable (list for now, might turn into generator if the process turns out to be demanding)
+        The entire set of data for the specified index/pixel in this set of HDUs.
+
+    None
+        If no the file type/extension is not known.
+    """
+    # Conversion from secs to BMJD
+    sec_to_day = 1 / (3600 * 24)
+
+    # Prove the first HDU to get the total number of entries needed
+    # Assuming all HDUs to have the same dimensions
+    pix_vals = np.empty(hdus[0].ndims[0] * len(hdus))
+    times = np.empty(hdus[0].ndims[0] * len(hdus))
+
+    # Sort the HDUs using the Barycenter Mod. Julian Date of the observation as key
+    hdus.sort(key=lambda x: x.timestamp)
+
+    # Iterate through the HDUs
+    for j in np.arange(0, len(hdus)):
+        # Array of pixel values for
+        np.put(pix_vals, np.arange(j * hdus[0].ndims[0], j * hdus[0].ndims[0] + hdus[0].ndims[0]), hdus[j].pixel_values(idx))
+
+        times_curr = [(hdus[j].timestamp + (hdus[j].frametime * i * sec_to_day)) for i in np.arange(0, hdus[j].ndims[0])]
+
+        # Array of all the timestamps, where we add i * frametime to the timestamp
+        np.put(times, np.arange(j * hdus[0].ndims[0], j * hdus[0].ndims[0] + hdus[0].ndims[0]), times_curr)
+
+    if zipped:
+        # Returns the two arrays zipped in (time, pix_val)-pairs
+        return zip(times, pix_vals)
+    else:
+        # Returns the two arrays separate: times, pix_vals
+        return times, pix_vals
