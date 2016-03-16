@@ -1,8 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="10d086ac-3188-4f8c-95c9-a4d8e8a02b31" name="Default" comment="">
+    <list default="true" id="10d086ac-3188-4f8c-95c9-a4d8e8a02b31" name="Default" comment="Added more time options to fits_to_time()">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pypeira/core/hdu.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pypeira/io/reader.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/QualityAnalysis_46466816.README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0000_0000_2_bcd.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0000_0000_2_bimsk.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0000_0000_2_bunc.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0000_0000_2_cov2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0000_0000_2_msk2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0000_0000_2_sub2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0000_0000_2_unc2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0001_0000_2_bcd.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0001_0000_2_bimsk.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0001_0000_2_bunc.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0001_0000_2_cov2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0001_0000_2_msk2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0001_0000_2_sub2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0001_0000_2_unc2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0002_0000_2_bcd.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0002_0000_2_bimsk.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0002_0000_2_bunc.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0002_0000_2_cov2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0002_0000_2_msk2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0002_0000_2_sub2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0002_0000_2_unc2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0003_0000_2_bcd.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0003_0000_2_bimsk.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0003_0000_2_bunc.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0003_0000_2_cov2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0003_0000_2_msk2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0003_0000_2_sub2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0003_0000_2_unc2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0004_0000_2_bcd.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0004_0000_2_bimsk.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0004_0000_2_bunc.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0004_0000_2_cov2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0004_0000_2_msk2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0004_0000_2_sub2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0004_0000_2_unc2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0005_0000_2_bcd.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0005_0000_2_bimsk.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0005_0000_2_bunc.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0005_0000_2_cov2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0005_0000_2_msk2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0005_0000_2_sub2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0005_0000_2_unc2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0006_0000_2_bcd.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0006_0000_2_bimsk.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0006_0000_2_bunc.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0006_0000_2_cov2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0006_0000_2_msk2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0006_0000_2_sub2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0006_0000_2_unc2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0007_0000_2_bcd.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0007_0000_2_bimsk.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0007_0000_2_bunc.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0007_0000_2_cov2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0007_0000_2_msk2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0007_0000_2_sub2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0007_0000_2_unc2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0008_0000_2_bcd.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0008_0000_2_bimsk.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0008_0000_2_bunc.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0008_0000_2_cov2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0008_0000_2_msk2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0008_0000_2_sub2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0008_0000_2_unc2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0009_0000_2_bcd.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0009_0000_2_bimsk.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0009_0000_2_bunc.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0009_0000_2_cov2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0009_0000_2_msk2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0009_0000_2_sub2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0009_0000_2_unc2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0010_0000_2_bcd.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0010_0000_2_bimsk.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0010_0000_2_bunc.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0010_0000_2_cov2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0010_0000_2_msk2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0010_0000_2_sub2d.fits" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/pypeira/test/test_imgs/ch2/bcd/SPITZER_I2_46466816_0010_0000_2_unc2d.fits" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypeira.egg-info/PKG-INFO" afterPath="$PROJECT_DIR$/pypeira.egg-info/PKG-INFO" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypeira/core/brightness.py" afterPath="$PROJECT_DIR$/pypeira/core/brightness.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypeira/io/common.py" afterPath="$PROJECT_DIR$/pypeira/io/common.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypeira/io/fits.py" afterPath="$PROJECT_DIR$/pypeira/io/fits.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypeira/pypeira.py" afterPath="$PROJECT_DIR$/pypeira/pypeira.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypeira/test/test_pypeira.py" afterPath="$PROJECT_DIR$/pypeira/test/test_pypeira.py" />
     </list>
     <ignored path="pypeira.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,7 +120,7 @@
             <entry file="file://$PROJECT_DIR$/pypeira/pypeira.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+                  <caret line="108" column="27" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -41,12 +128,76 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="time.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="time.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pypeira/core/time.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.41925466">
-                  <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="common.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pypeira/io/common.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="122" column="40" selection-start-line="122" selection-start-column="40" selection-end-line="122" selection-end-column="40" />
+                  <folding>
+                    <element signature="e#0#9#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="reader.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pypeira/io/reader.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
+                  <folding>
+                    <element signature="e#0#9#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="brightness.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pypeira/core/brightness.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.7763975">
+                  <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#31#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+                <state split_layout="FIRST">
+                  <first_editor vertical-scroll-proportion="0.4237013">
+                    <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+                    <folding />
+                  </first_editor>
+                  <second_editor />
+                </state>
+              </provider>
+              <provider selected="true" editor-type-id="MultiMarkdownFxPreviewEditor">
+                <state />
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="fits.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pypeira/io/fits.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#31#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -71,7 +222,7 @@
             <entry file="file://$PROJECT_DIR$/pypeira/test/test_pypeira.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+                  <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
                   <folding>
                     <element signature="e#0#13#0" expanded="true" />
                   </folding>
@@ -89,35 +240,13 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="common.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/pypeira/io/common.py">
+          <file leaf-file-name="hdu.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pypeira/core/hdu.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.79037267">
-                  <caret line="210" column="9" selection-start-line="210" selection-start-column="9" selection-end-line="210" selection-end-column="9" />
+                <state vertical-scroll-proportion="0.5667702">
+                  <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
                   <folding>
-                    <element signature="e#0#9#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="brightness.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pypeira/core/brightness.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="fits.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pypeira/io/fits.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#31#0" expanded="true" />
+                    <element signature="e#0#18#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -140,17 +269,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pypeira/core/brightness.py" />
         <option value="$PROJECT_DIR$/pypeira/core/sort.py" />
-        <option value="$PROJECT_DIR$/pypeira/io/fits.py" />
         <option value="$PROJECT_DIR$/pypeira/test/io_test.py" />
         <option value="$PROJECT_DIR$/pypeira/test/test_brightness.py" />
         <option value="$PROJECT_DIR$/pypeira/test/__init__.py" />
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/pypeira/test/test_pypeira.py" />
         <option value="$PROJECT_DIR$/pypeira/core/time.py" />
-        <option value="$PROJECT_DIR$/pypeira/pypeira.py" />
+        <option value="$PROJECT_DIR$/pypeira/io/hdu.py" />
+        <option value="$PROJECT_DIR$/pypeira/io/reader.py" />
+        <option value="$PROJECT_DIR$/pypeira/test/test_pypeira.py" />
+        <option value="$PROJECT_DIR$/pypeira/io/fits.py" />
         <option value="$PROJECT_DIR$/pypeira/io/common.py" />
+        <option value="$PROJECT_DIR$/pypeira/pypeira.py" />
+        <option value="$PROJECT_DIR$/pypeira/core/hdu.py" />
+        <option value="$PROJECT_DIR$/pypeira/core/brightness.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -189,6 +322,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -236,28 +370,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pypeira" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pypeira" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pypeira" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test_imgs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -336,7 +448,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,6 +455,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.2389814" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pypeira/core" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.pypeira">
     <configuration default="false" name="pypeira" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -649,31 +765,31 @@
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.102314815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39939255" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953683" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39939255" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39939255" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953683" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -684,8 +800,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.102314815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -717,39 +833,13 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pypeira/core/time.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypeira/io/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="96" column="18" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pypeira/core/brightness.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -767,7 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="208" column="8" selection-start-line="208" selection-start-column="4" selection-end-line="208" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -813,7 +902,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-          <folding />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -831,7 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="208" column="8" selection-start-line="208" selection-start-column="4" selection-end-line="208" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -884,7 +974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -892,7 +981,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -945,7 +1036,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1079,7 +1172,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="208" column="8" selection-start-line="208" selection-start-column="4" selection-end-line="208" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1097,68 +1189,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypeira/io/fits.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypeira/core/sort.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypeira/test/test_pypeira.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypeira/core/brightness.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypeira/io/common.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79037267">
-          <caret line="210" column="9" selection-start-line="210" selection-start-column="9" selection-end-line="210" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypeira/pypeira.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1170,11 +1206,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pypeira/core/sort.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pypeira/core/time.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41925466">
-          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pypeira/io/fits.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pypeira/io/common.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="122" column="40" selection-start-line="122" selection-start-column="40" selection-end-line="122" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pypeira/pypeira.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="27" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pypeira/io/reader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pypeira/test/test_pypeira.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pypeira/core/hdu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5667702">
+          <caret line="84" column="23" selection-start-line="84" selection-start-column="23" selection-end-line="84" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor vertical-scroll-proportion="0.4237013">
+            <caret line="29" column="6" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="6" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pypeira/core/brightness.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7763975">
+          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
