@@ -71,6 +71,7 @@ class IRA(object):
             self.header_kwds = self._header_kwds_defaults
 
     def read_header(self, path, inplace=False):
+        # Stores the values of a set of header keywords on the instance. Doesn't have any uses as of yet.
         headers = _read(path, headers_only=True)
 
         if inplace:

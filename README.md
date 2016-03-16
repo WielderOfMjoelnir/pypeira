@@ -27,4 +27,13 @@ idx, max_val = ira.get_brightest(data)
 
 # pixel_data() then collects all the values of that specific pixel, for all the HDUs in the "data" list.
 xs, ys = ira.pixel_data(idx, data)
+
+# Finally one simply plots using Matplotlib
+import matplotlib.pyplot as plt
+
+plt.plot(xs, ys)
+plt.show()
+
+# OR, instead of all this code, one can simply
+ira.plot_brightest()
 <code></pre>
