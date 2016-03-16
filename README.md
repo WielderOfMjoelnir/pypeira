@@ -1,16 +1,11 @@
 # pypeira
 
-### Description
+## Description
 My attempt at reducing images from the SSC into ultra high-precision time-resolved photometry.
 **NOTE:** I had to change it quite a bit recently, so some documentation (almost everything about FITS objects)
 might not be correct. Will change this as soon as I have time.
 
-### Dependencies
-* numpy >= 1.10.4
-* matplotlib >= 1.5.1
-* fitsio >= 0.9.7
-
-### Usage
+## Usage
 
 <pre><code>
 import pypeira.pypeira as p
@@ -39,3 +34,21 @@ plt.show()
 # OR, instead of all this code, one can simply
 ira.plot_brightest()
 <code></pre>
+
+## TODO
+1. Fix documentation for current version and clean up code.
+2. Complete the "config"-object <code>IRA</code> and determine whether to let the subclasses to-be of
+<code>HDU</code> depend on source or file type. This is something that should be discussed with mentor.
+3. Implement centroid algorithms.
+4. Removal of hot pixels, bad frames, etc.
+5. Background subtraction
+6. Implementation of aperture photometry
+7. Visualizing data
+
+## Dependencies
+* numpy >= 1.10.4
+* matplotlib >= 1.5.1
+* fitsio >= 0.9.7
+
+## License
+MIT
