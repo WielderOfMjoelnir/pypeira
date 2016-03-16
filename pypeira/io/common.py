@@ -4,7 +4,7 @@ from pypeira.io.reader import _read_file
 from pypeira.core.hdu import HDU
 
 
-def read(path, ftype='fits', data_type=None, walk=True, headers_only=False, image_only=False, *args, **kwargs):
+def read(path, ftype='fits', dtype=None, walk=True, headers_only=False, image_only=False, *args, **kwargs):
     """
     Proper description will be written when implementation is more complete.
 
@@ -19,9 +19,9 @@ def read(path, ftype='fits', data_type=None, walk=True, headers_only=False, imag
         If file name then it will simply read the data form the given file.
     ftype: str, optional
         The file type/extension of the files you want to read data from. Default is 'fits'.
-    data_type: str, optional
+    dtype: str, optional
         The type of FITS file you want to read. If not None, will filter out all path names not
-        ending in "data_type.FITS", i.e. if data_type = 'bcd'
+        ending in "dtype.FITS", i.e. if dtype = 'bcd'
 
             just_a_test_bcd.FITS
 
@@ -48,21 +48,22 @@ def read(path, ftype='fits', data_type=None, walk=True, headers_only=False, imag
 
     Returns
     -------
-    FITS object
+    HDU object
         If 'path' pointed to is a
-            single file - returned 'data' will be a single FITS object,
-            directory - returned 'data' will be a list of FITS objects,
+            single file - returned 'data' will be a single HDU object,
+            directory - returned 'data' will be a list of HDU objects,
             no valid files - returned 'data' will be None. "valid" is as specified by the
             ftype argument, which defaults to 'fits'.
 
-        Note for a single file the returned 'data' will be only one FITS object, NOT a list
+        Note for a single file the returned 'data' will be only one HDU object, NOT a list
         as if the path is a directory.
 
-        See fitsio.fitslib.FITS for implementation of FITS.
+        See pypeira.core.hdu for implementation of HDU.
 
     FITSHDR object
         If 'headers_only' is not False it will return in the same manner as for the FITS object,
         but now the type of the files will be FITSHDR objects.
+        Can be access like a regular dictionary using indices.
 
         See fitsio.fitslib.FITSHDR for implementation of FITSHDR.
 
@@ -88,9 +89,9 @@ def read(path, ftype='fits', data_type=None, walk=True, headers_only=False, imag
     if os.path.isfile(path):
         # Read file
         if headers_only or image_only:
-            data = _read_file(path, ftype, data_type, headers_only, image_only, *args, **kwargs)
+            data = _read_file(path, ftype, dtype, headers_only, image_only, *args, **kwargs)
         else:
-            data = HDU(path, ftype=ftype, dtype=data_type)
+            data = HDU(path, ftype=ftype, dtype=dtype)
 
     # Check if dir
     elif os.path.isdir(path):
@@ -109,14 +110,14 @@ def read(path, ftype='fits', data_type=None, walk=True, headers_only=False, imag
                     file_path = os.path.join(node[0], fname)
 
                     if headers_only or image_only:
-                        file_data = _read_file(file_path, ftype, data_type, headers_only, image_only,
+                        file_data = _read_file(file_path, ftype, dtype, headers_only, image_only,
                                                *args, **kwargs)
                         # If read was successful, append to data
                         if file_data is not None:
                             data.append(file_data)
                     else:
                         # Create HDU instance which will call _read_file() itself
-                        hdu = HDU(file_path, ftype=ftype, dtype=data_type, *args, **kwargs)
+                        hdu = HDU(file_path, ftype=ftype, dtype=dtype, *args, **kwargs)
 
                         # If read was successful, append to data
                         if hdu.has_data:
@@ -125,7 +126,7 @@ def read(path, ftype='fits', data_type=None, walk=True, headers_only=False, imag
             # Read files from top dir only
             for fname in os.listdir(path):
                 # os.listdir() returns a list of paths as strings for each file in path
-                file_data = _read_file(fname, ftype, data_type, headers_only, image_only, *args, **kwargs)
+                file_data = _read_file(fname, ftype, dtype, headers_only, image_only, *args, **kwargs)
 
                 # if _read_file() was successful, append returned value to 'data' list
                 if file_data is not None:

@@ -39,8 +39,8 @@ def get_brightest(hdus):
 
     Parameters
     ----------
-    hdus: [FITS object ... ]
-        A list or tuple of FITS objects containing the Image_HDU's with entries to be compared.
+    hdus: [HDU objects ... ]
+        A list or tuple of HDU objects containing the image data with entries to be compared.
 
     Returns
     -------
@@ -80,8 +80,8 @@ def pixel_data(idx, hdus, zipped=False):
     ----------
     idx: (int ... )
         The n-dimensional index of the pixel.
-    hdus: FITS objects (no others for now)
-        An iterable of HDUs which contains the relevant data.
+    hdus: [HDU, ... ]
+        An iterable of HDU objects which contain the relevant data.
     zipped: bool, optional
         Specifies whether or not to return the time and pixel value zipped. That is, if zipped = True
         then the returned values are in the form
@@ -104,7 +104,7 @@ def pixel_data(idx, hdus, zipped=False):
         The entire set of data for the specified index/pixel in this set of HDUs.
 
     None
-        If no the file type/extension is not known.
+        If the file type/extension is not known.
     """
     # Conversion from secs to BMJD
     sec_to_day = 1 / (3600 * 24)

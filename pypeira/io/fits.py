@@ -54,7 +54,7 @@ def read_image(path, *args, **kwargs):
 def read_fits(path, headers_only=False, image_only=False, *args, **kwargs):
     """
     Reader function for the FITS files. Takes advantage of the fitsio
-    reader function and thus the fitsio.FITS object.
+    reader function.
 
     Parameters
     ----------
@@ -75,16 +75,15 @@ def read_fits(path, headers_only=False, image_only=False, *args, **kwargs):
 
     Returns
     -------
-    FITS object
-        If none of the "only"-keywords are not False, then a FITS object will be returned.
-
-        See fitsio.fitslib.FITS for implementation of FITS.
-
-    FITSHDR object
-        If 'headers_only' is not False it will return in the same manner as for the FITS object,
-        but now the type of the files will be FITSHDR objects.
+    hdr, image: FITSHDR object, np.array
+        If none of the "only"-keywords are not False, then a (FITSHDR, np.array)-pair  will be returned.
+        Note that a FITSHDR can be access by indexing as a normal dictionary.
 
         See fitsio.fitslib.FITSHDR for implementation of FITSHDR.
+
+    FITSHDR object
+        If 'headers_only' is not False it will return in the same manner as for normally,
+        but now the type of the files will be FITSHDR objects.
 
     numpy.array
         If 'image_only' is not False it will return in the same manner as for the FITS object,

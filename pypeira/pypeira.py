@@ -72,6 +72,23 @@ class IRA(object):
             self.header_kwds = self._header_kwds_defaults
 
     def read_header(self, path, inplace=False):
+        """
+
+        Parameters
+        ----------
+        path: str
+            A string representing the path of the file to be read.
+        inplace: bool, optional
+            A boolean which tells the function whether or not to attach the header values onto the IRA instance.
+            Possible use as is now could be if one simply wants to carry the header files through
+            an entire data set instead of grabbing one for each image.
+
+        Returns
+        -------
+        headers: FITSHDR object
+            Can be accessed like a normal dictionary using indices.
+
+        """
         # Stores the values of a set of header keywords on the instance. Doesn't have any uses as of yet.
         headers = _read(path, headers_only=True)
 
@@ -82,11 +99,32 @@ class IRA(object):
         return headers
 
     @staticmethod
-    def read(path, ftype='fits', fits_type=None, walk=True, headers_only=False, image_only=False, *args, **kwargs):
+    def read(path, ftype='fits', dtype=None, walk=True, headers_only=False, image_only=False, *args, **kwargs):
+        """
+
+        Parameters
+        ----------
+        path: str
+            A string representing the path containing the file (could be dir or the path directly to it).
+            Notice that if 'walk' is True (which it is by default) and you provide a path to a dir, it
+            will walk the directory, reading any files which satisfy the given criteria.
+        ftype: str
+            A string representing the file type/extension you want to be read.
+        dtype
+        walk
+        headers_only
+        image_only
+        args
+        kwargs
+
+        Returns
+        -------
+
+        """
         return _read(
             path,
             ftype=ftype,
-            fits_type=fits_type,
+            dtype=dtype,
             walk=walk,
             headers_only=headers_only,
             image_only=image_only,
