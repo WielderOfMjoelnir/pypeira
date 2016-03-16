@@ -5,13 +5,25 @@ My attempt at reducing images from the SSC into ultra high-precision time-resolv
 **NOTE:** I had to change it quite a bit recently, so some documentation (almost everything about FITS objects)
 might not be correct. Will change this as soon as I have time.
 
+## Installation
+
+First clone the project
+
+<pre><code>git https://github.com/WielderOfMjoelnir/pypeira.git</code></pre>
+
+Then <code>cd</cd> into the project folder and run the command
+
+<pre><code>python setup.py install</code></pre>
+
+You can then import <code>pypeira</code> as you would normally. See usage below.
+
 ## Usage
 
 <pre><code>
-import pypeira.pypeira as p
+import pypeira.pypeira as pype
 
 # Create instance of IRA (not necessary but much more convenient for now)
-ira = p.IRA()
+ira = pype.IRA()
 path = "/path/to/FITS/files"
 
 # Read files. The read() function will walk from the given dir and find all files satisfying 
