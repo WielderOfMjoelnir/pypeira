@@ -1,8 +1,9 @@
 # pypeira
-A data reduction pipeline for space-based infrared observations.
 
 ### Description
 My attempt at reducing images from the SSC into ultra high-precision time-resolved photometry.
+*NOTE:* I had to change it quite a bit recently, so some documentation (almost everything about FITS objects)
+might not be correct. Will change this as soon as I have time.
 
 ### Dependencies
 * numpy >= 1.10.4
