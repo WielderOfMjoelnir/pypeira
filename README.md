@@ -33,7 +33,7 @@ plt.show()
 
 # OR, instead of all this code, one can simply
 ira.plot_brightest()
-<code></pre>
+</code></pre>
 
 ## TODO
 1. Fix documentation for current version and clean up code.
