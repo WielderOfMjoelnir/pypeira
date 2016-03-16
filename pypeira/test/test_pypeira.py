@@ -7,7 +7,6 @@ import fitsio
 import numpy as np
 
 from pypeira.pypeira import IRA
-from pypeira.core.time import fits_get_time
 from pypeira.core.hdu import HDU
 
 

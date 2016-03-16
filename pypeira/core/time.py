@@ -1,4 +1,4 @@
-def fits_get_time(hdu, time_format='bmjd'):
+def hdu_get_time(hdu, time_format='bmjd'):
     """
     Will be used as a key function for the list.sort() or sorted() functions.
     Example,
@@ -31,10 +31,7 @@ def fits_get_time(hdu, time_format='bmjd'):
         'dce': 'ET_OBS'
     }
 
-    # Read FITS header and return BMJD_OBS
-    hdr = hdu[0].read_header()
-
     if format_to_kwrd.get(time_format):
-        return hdr[format_to_kwrd[time_format]]
+        return hdu.hdr[format_to_kwrd.get(time_format)]
     else:
         return None
