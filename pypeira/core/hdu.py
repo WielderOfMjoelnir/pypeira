@@ -1,8 +1,7 @@
 import numpy as np
-import fitsio
 import os.path
 
-from pypeira.io.common import _read_file
+from pypeira.io.reader import _read_file
 from pypeira.core.brightness import get_max
 
 

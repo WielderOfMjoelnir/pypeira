@@ -2,6 +2,3 @@ numpy
 matplotlib
 fitsio
 pandas
-
-[testing]
-tox

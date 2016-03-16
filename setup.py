@@ -2,6 +2,7 @@ from __future__ import print_function
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 import io
+import encodings
 import os
 import sys
 
@@ -74,7 +75,7 @@ setup(
     include_package_data=True,
     platforms='any',
     test_suite='pypeira.test.test_pypeira',
-    classifiers = [
+    classifiers=[
         'Programming Language :: Python',
         'Development Status :: 1 - Planning',
         'Natural Language :: English',
@@ -84,8 +85,5 @@ setup(
         'Operating System :: OS Independent',
         'Topic :: Scientific/Engineering :: Astronomy',
         'Topic :: Scientific/Engineering :: Physics'
-        ],
-    extras_require={
-        'testing': ['tox'],
-    }
+    ]
 )

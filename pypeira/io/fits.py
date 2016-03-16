@@ -1,9 +1,6 @@
 from __future__ import division
 
-import os.path
 import fitsio
-
-import pypeira.core.time
 
 """
 A FITS file is comprised of segments called Header/Data Units (HDUs), where the first
@@ -106,23 +103,5 @@ def read_fits(path, headers_only=False, image_only=False, *args, **kwargs):
         image = read_image(path, *args, **kwargs)
 
     return hdr, image
-
-
-def pixel_data(idx, hdus):
-    """
-    Get's the data for the entry at idx in each of the FITS objects in hdus, where hdus
-    is a list of FITS objects.
-
-    Parameters
-    ----------
-    idx: (int ... )
-        The n-dimensional index of the pixel.
-    hdus: FITS objects
-        An iterable over the FITS HDU's which contain the relevant data.
-
-    Returns
-    -------
-
-    """
 
 
