@@ -29,7 +29,7 @@ idx, max_val = ira.get_brightest(data)
 xs, ys = ira.pixel_data(idx, data)
 
 # Finally one simply plots using Matplotlib
-# NOTE: Hot pixels have not been removed at this stage, so some use of plt.ylim() and such is highly recommended.
+# NOTE: Hot pixels have not been removed at this stage, so some use of plt.ylim() is highly recommended.
 import matplotlib.pyplot as plt
 
 plt.plot(xs, ys)
