@@ -1,13 +1,19 @@
+try:
+    from pypeira.io.common import read as _read
+    import pypeira.core.brightness
+    import pypeira.core.time
+    import pypeira.core.sort
+except ImportError:
+    from io.common import read as _read
+    import core.brightness
+    import core.time
+    import core.sort
+
 import numpy as np
 import matplotlib.pyplot as plt
 
 from matplotlib import style
 style.use('ggplot')
-
-from io.common import read as _read
-import core.brightness
-import core.time
-import core.sort
 
 
 class IRA(object):

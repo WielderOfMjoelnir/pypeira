@@ -1,7 +1,7 @@
 import os
 import numpy as np
 
-from reader import _read_file
+from pypeira.io.reader import _read_file
 from pypeira.core.hdu import HDU
 
 

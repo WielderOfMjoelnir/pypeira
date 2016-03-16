@@ -1,6 +1,6 @@
 import os
 
-from fits import read_fits
+from pypeira.io.fits import read_fits
 
 _readers = {
     'fits': read_fits

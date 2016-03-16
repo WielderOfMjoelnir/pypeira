@@ -4,4 +4,4 @@ fitsio
 pandas
 
 [testing]
-pytest
+tox

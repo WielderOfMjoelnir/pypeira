@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="10d086ac-3188-4f8c-95c9-a4d8e8a02b31" name="Default" comment="">
+    <list default="true" id="10d086ac-3188-4f8c-95c9-a4d8e8a02b31" name="Default" comment="Fixed imports to be compatible with Python 2.7 as well as Python 3.*.&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypeira.egg-info/PKG-INFO" afterPath="$PROJECT_DIR$/pypeira.egg-info/PKG-INFO" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypeira.egg-info/SOURCES.txt" afterPath="$PROJECT_DIR$/pypeira.egg-info/SOURCES.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypeira.egg-info/requires.txt" afterPath="$PROJECT_DIR$/pypeira.egg-info/requires.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypeira/io/common.py" afterPath="$PROJECT_DIR$/pypeira/io/common.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypeira/io/reader.py" afterPath="$PROJECT_DIR$/pypeira/io/reader.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypeira/pypeira.py" afterPath="$PROJECT_DIR$/pypeira/pypeira.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pypeira/test/test_pypeira.py" afterPath="$PROJECT_DIR$/pypeira/test/test_pypeira.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tox.ini" afterPath="$PROJECT_DIR$/tox.ini" />
     </list>
     <ignored path="pypeira.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,9 +42,9 @@
             <entry file="file://$PROJECT_DIR$/pypeira/pypeira.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="73" column="105" selection-start-line="73" selection-start-column="105" selection-end-line="73" selection-end-column="105" />
+                  <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
                   <folding>
-                    <element signature="e#0#18#0" expanded="true" />
+                    <element signature="e#276#294#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -56,9 +64,10 @@
             <entry file="file://$PROJECT_DIR$/pypeira/io/common.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="122" column="40" selection-start-line="122" selection-start-column="40" selection-end-line="122" selection-end-column="40" />
+                  <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
+                    <marker date="1458129843643" expanded="true" signature="217:5525" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -68,9 +77,9 @@
             <entry file="file://$PROJECT_DIR$/pypeira/io/reader.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
+                  <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
                   <folding>
-                    <element signature="e#0#9#0" expanded="true" />
+                    <marker date="1458129868043" expanded="true" signature="0:48" placeholder="import ..." />
                   </folding>
                 </state>
               </provider>
@@ -82,18 +91,18 @@
                 <state vertical-scroll-proportion="0.0">
                   <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
                   <folding>
-                    <element signature="e#0#31#0" expanded="true" />
+                    <marker date="1458121201679" expanded="true" signature="0:51" placeholder="import ..." />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
                 <state split_layout="FIRST">
-                  <first_editor vertical-scroll-proportion="0.4383117">
-                    <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+                  <first_editor vertical-scroll-proportion="0.87969923">
+                    <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
                     <folding />
                   </first_editor>
                   <second_editor />
@@ -116,11 +125,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/setup.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
+                <state vertical-scroll-proportion="0.6226708">
+                  <caret line="69" column="28" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
                   <folding>
                     <element signature="e#0#37#0" expanded="true" />
                   </folding>
@@ -136,7 +145,7 @@
             <entry file="file://$PROJECT_DIR$/pypeira/test/test_pypeira.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+                  <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
                   <folding>
                     <element signature="e#0#13#0" expanded="true" />
                   </folding>
@@ -157,8 +166,8 @@
           <file leaf-file-name="hdu.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pypeira/core/hdu.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5248447">
-                  <caret line="81" column="13" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
+                <state vertical-scroll-proportion="1.5372671">
+                  <caret line="110" column="22" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -187,17 +196,17 @@
         <option value="$PROJECT_DIR$/pypeira/test/io_test.py" />
         <option value="$PROJECT_DIR$/pypeira/test/test_brightness.py" />
         <option value="$PROJECT_DIR$/pypeira/test/__init__.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/pypeira/core/time.py" />
         <option value="$PROJECT_DIR$/pypeira/io/hdu.py" />
-        <option value="$PROJECT_DIR$/pypeira/io/reader.py" />
-        <option value="$PROJECT_DIR$/pypeira/test/test_pypeira.py" />
         <option value="$PROJECT_DIR$/pypeira/io/fits.py" />
-        <option value="$PROJECT_DIR$/pypeira/io/common.py" />
-        <option value="$PROJECT_DIR$/pypeira/core/hdu.py" />
         <option value="$PROJECT_DIR$/pypeira/core/brightness.py" />
+        <option value="$PROJECT_DIR$/pypeira/core/hdu.py" />
+        <option value="$PROJECT_DIR$/pypeira/test/test_pypeira.py" />
+        <option value="$PROJECT_DIR$/pypeira/io/common.py" />
+        <option value="$PROJECT_DIR$/pypeira/io/reader.py" />
         <option value="$PROJECT_DIR$/pypeira/pypeira.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
   </component>
@@ -265,7 +274,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pypeira" />
+              <option name="myItemId" value="pypeira.egg-info" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -280,10 +289,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pypeira" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -367,7 +372,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2389814" />
   </component>
   <component name="RecentsManager">
@@ -667,7 +672,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458124371993</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Forgot a comment.">
+      <created>1458124450825</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1458124450825</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -747,7 +758,9 @@
     <MESSAGE value="Added unittesting.&#10;Added fits_get_time() in core.time. &#10;Added pixel extracting methods, both general but also for FITS specifically." />
     <MESSAGE value="Added more time options to fits_to_time()" />
     <MESSAGE value="Added some comments and changed a bit of the README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some comments and changed a bit of the README.md" />
+    <MESSAGE value="Forgot a comment." />
+    <MESSAGE value="Fixed imports to be compatible with Python 2.7 as well as Python 3.*.&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed imports to be compatible with Python 2.7 as well as Python 3.*.&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -776,7 +789,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="69" selection-start-line="45" selection-start-column="69" selection-end-line="45" selection-end-column="69" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#276#294#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -805,6 +818,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <marker date="1458129843643" expanded="true" signature="217:5525" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -814,7 +828,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <marker date="1458121201679" expanded="true" signature="0:51" placeholder="import ..." />
           </folding>
         </state>
       </provider>
@@ -841,7 +855,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#276#294#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -893,7 +907,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <marker date="1458121201679" expanded="true" signature="0:51" placeholder="import ..." />
           </folding>
         </state>
       </provider>
@@ -903,7 +917,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#276#294#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -948,7 +962,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <marker date="1458121201679" expanded="true" signature="0:51" placeholder="import ..." />
           </folding>
         </state>
       </provider>
@@ -958,7 +972,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#276#294#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -988,7 +1002,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#276#294#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1008,7 +1022,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#276#294#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1100,28 +1114,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="37" selection-start-line="62" selection-start-column="37" selection-end-line="62" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tox.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypeira/core/sort.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1143,12 +1139,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pypeira/test/test_pypeira.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pypeira/io/common.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="122" column="40" selection-start-line="122" selection-start-column="40" selection-end-line="122" selection-end-column="40" />
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <marker date="1458129843643" expanded="true" signature="217:5525" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1156,19 +1171,27 @@
     <entry file="file://$PROJECT_DIR$/pypeira/io/reader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="51" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1458129868043" expanded="true" signature="0:48" placeholder="import ..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pypeira/test/test_pypeira.py">
+    <entry file="file://$PROJECT_DIR$/pypeira/core/sort.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pypeira/core/hdu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5372671">
+          <caret line="110" column="22" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1178,25 +1201,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pypeira/core/hdu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5248447">
-          <caret line="81" column="13" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1458121201679" expanded="true" signature="0:51" placeholder="import ..." />
           </folding>
         </state>
       </provider>
@@ -1204,9 +1209,9 @@
     <entry file="file://$PROJECT_DIR$/pypeira/pypeira.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="105" selection-start-line="73" selection-start-column="105" selection-end-line="73" selection-end-column="105" />
+          <caret line="35" column="51" selection-start-line="35" selection-start-column="51" selection-end-line="35" selection-end-column="51" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#276#294#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1214,8 +1219,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MultiMarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor vertical-scroll-proportion="0.4383117">
-            <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+          <first_editor vertical-scroll-proportion="0.87969923">
+            <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1223,6 +1228,16 @@
       </provider>
       <provider editor-type-id="MultiMarkdownFxPreviewEditor">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6226708">
+          <caret line="69" column="28" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
