@@ -3,6 +3,7 @@ import fitsio
 import os.path
 
 from pypeira.io.common import _read_file
+from pypeira.core.brightness import get_max
 
 
 class HDU(object):
@@ -109,3 +110,6 @@ class HDU(object):
             pix_val[i] = self.img[i, pix_idx[0], pix_idx[1]]
 
         return pix_val
+
+    def get_max(self):
+        return get_max(self.img)

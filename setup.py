@@ -28,8 +28,7 @@ def read(*filenames, **kwargs):
     return sep.join(buf)
 
 
-# long_description = read('README.md') # TODO: Add 'CHANGES.md'
-long_description = ""
+long_description = read('README.md') # TODO: Add 'CHANGES.md'
 
 
 class ToxTest(TestCommand):

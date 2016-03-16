@@ -1,15 +1,10 @@
 try:
     from pypeira.io.common import read as _read
-    import pypeira.core.brightness
-    import pypeira.core.time
-    import pypeira.core.sort
+    import pypeira.core.brightness as brightness
 except ImportError:
     from io.common import read as _read
-    import core.brightness
-    import core.time
-    import core.sort
+    import core.brightness as brightness
 
-import numpy as np
 import matplotlib.pyplot as plt
 
 from matplotlib import style
@@ -100,18 +95,18 @@ class IRA(object):
 
     @staticmethod
     def get_brightest(hdus):
-        return core.brightness.get_brightest(hdus)
+        return brightness.get_brightest(hdus)
 
     @staticmethod
     def pixel_data(idx, hdus, zipped=False):
         # Get data for a specific pixel
-        return core.brightness.pixel_data(idx, hdus, zipped)
+        return brightness.pixel_data(idx, hdus, zipped)
 
     @staticmethod
     def plot_brightest(hdus):
-        idx, brightest = core.brightness.get_brightest(hdus)
+        idx, brightest = brightness.get_brightest(hdus)
 
-        xs, ys = core.brightness.pixel_data(idx, hdus)
+        xs, ys = brightness.pixel_data(idx, hdus)
 
         plt.scatter(xs, ys)
 

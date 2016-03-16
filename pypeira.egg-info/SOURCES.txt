@@ -11,7 +11,6 @@ pypeira/centroids/__init__.py
 pypeira/core/__init__.py
 pypeira/core/brightness.py
 pypeira/core/hdu.py
-pypeira/core/sort.py
 pypeira/core/time.py
 pypeira/io/__init__.py
 pypeira/io/common.py
