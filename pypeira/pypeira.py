@@ -101,6 +101,10 @@ class IRA(object):
     @staticmethod
     def read(path, ftype='fits', dtype=None, walk=True, headers_only=False, image_only=False, *args, **kwargs):
         """
+        Proper description will be written when implementation is more complete.
+
+        Reads files from path. Can handle path referencing to both dir and specific file.
+        Will walk directory unless specified otherwise.
 
         Parameters
         ----------
@@ -108,18 +112,64 @@ class IRA(object):
             A string representing the path containing the file (could be dir or the path directly to it).
             Notice that if 'walk' is True (which it is by default) and you provide a path to a dir, it
             will walk the directory, reading any files which satisfy the given criteria.
-        ftype: str
+        ftype: str, optional
             A string representing the file type/extension you want to be read.
-        dtype
-        walk
-        headers_only
-        image_only
-        args
-        kwargs
+        dtype: str, optional
+            The type of FITS file you want to read. If not None, will filter out all path names not
+            ending in "dtype.FITS", i.e. if dtype = 'bcd'
+
+                just_a_test_bcd.FITS
+
+            is a valid, but
+
+                just_a_test.FITS
+
+            is not valid, in this case.
+        walk: bool, optional
+            Specifies whether or not to walk the directory. If 'path' is not a directory, 'walk'
+            affects nothing. Default is True.
+        headers_only: bool, optional
+            Set to True if you only want to read the headers of the files. If True, the data
+            return will only be the headers of the files read. Default is False.
+        image_only: bool, optional
+            Set to True if you only want to read the image data of the files. NOT IMPLEMENTED.
+        *args: optional
+            Contains all arguments that will be passed onto the actual reader function, where the
+            reader function used for each file type/extension is as specified above.
+        **kwargs: optional
+            Same as for 'args'. Contains all keyword arguments that will be passed onto the actual
+            reader function, where the reader used for each file type/extension is as specified in
+            io.reader.
 
         Returns
         -------
+        HDU object
+            If 'path' pointed to is a
+                single file - returned 'data' will be a single HDU object,
+                directory - returned 'data' will be a list of HDU objects,
+                no valid files - returned 'data' will be None. "valid" is as specified by the
+                ftype argument, which defaults to 'fits'.
 
+            Note for a single file the returned 'data' will be only one HDU object, NOT a list
+            as if the path is a directory.
+
+            See pypeira.core.hdu for implementation of HDU.
+
+        FITSHDR object
+            If 'headers_only' is not False it will return in the same manner as for the HDU case,
+            but now the type of the files will be FITSHDR objects.
+            Can be access like a regular dictionary using indices.
+
+            See fitsio.fitslib.FITSHDR for implementation of FITSHDR.
+
+        numpy.array
+            If 'image_only' is not False it will return in the same manner as for the HDU case,
+            but now the type of the tiles will be numpy.arrays.
+
+        Raises
+        ------
+        OSError
+            Raises OSError if the given path does not exist.
         """
         return _read(
             path,
@@ -133,20 +183,24 @@ class IRA(object):
 
     @staticmethod
     def get_brightest(hdus):
+        """ For docstring, see core.brightness.get_brightest. """
         return brightness.get_brightest(hdus)
 
     @staticmethod
     def pixel_data(idx, hdus, zipped=False):
+        """ For docstring, see core.brightness.pixel_data. """
         # Get data for a specific pixel
         return brightness.pixel_data(idx, hdus, zipped)
 
     @staticmethod
     def plot_brightest(hdus):
+        """ Simply calls the two methods above and plots the data returned. """
         idx, brightest = brightness.get_brightest(hdus)
 
         xs, ys = brightness.pixel_data(idx, hdus)
 
         plt.scatter(xs, ys)
+        plt.show()
 
 
 

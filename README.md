@@ -28,7 +28,7 @@ path = "/path/to/FITS/files"
 
 # Read files. The read() function will walk from the given dir and find all files satisfying 
 # the given criteria. Set 'walk' to False if this is not wanted.
-data = ira.read(path, data_type='bcd', walk=True)
+data = ira.read(path, dtype='bcd', walk=True)
 
 # get_brigthest() returns a (index, maximum_value)-pair
 idx, max_val = ira.get_brightest(data)
