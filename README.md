@@ -30,6 +30,9 @@ path = "/path/to/FITS/files"
 # the given criteria. Set 'walk' to False if this is not wanted.
 data = ira.read(path, dtype='bcd', walk=True)
 
+# Uncomment plot_brightest(data) below, and comment out EVERYTHING after this line for the easiest way.
+# ira.plot_brightest(data)
+
 # get_brigthest() returns a (index, maximum_value)-pair
 idx, max_val = ira.get_brightest(data)
 
@@ -42,9 +45,6 @@ import matplotlib.pyplot as plt
 
 plt.plot(xs, ys)
 plt.show()
-
-# OR, instead of all this code, one can simply
-ira.plot_brightest()
 </code></pre>
 
 ## TODO
