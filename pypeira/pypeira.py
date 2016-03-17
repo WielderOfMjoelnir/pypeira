@@ -199,7 +199,7 @@ class IRA(object):
 
         xs, ys = brightness.pixel_data(idx, hdus)
 
-        plt.scatter(xs, ys)
+        plt.plot(xs, ys)
         plt.show()
 
 
