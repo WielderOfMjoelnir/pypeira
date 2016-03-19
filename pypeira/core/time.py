@@ -1,5 +1,7 @@
 # This might no have any use anymore, as the HDU objects is the new thing.
 # Possibly changed it a bit to a time converter instead of getter I suppose.
+
+
 def hdu_get_time(hdu, time_format='bmjd'):
     """
     Will be used as a key function for the list.sort() or sorted() functions.

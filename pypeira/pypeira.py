@@ -2,7 +2,7 @@ try:
     from pypeira.io.common import read as _read
     import pypeira.core.brightness as brightness
 except ImportError:
-    from io.common import read as _read
+    from .io.common import read as _read
     import core.brightness as brightness
 
 import matplotlib.pyplot as plt
