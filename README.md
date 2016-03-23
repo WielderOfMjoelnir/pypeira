@@ -20,7 +20,7 @@ You *should* then be able to import <code>pypeira</code> as you normal.
 
 **Note:** If you're having trouble installing fitsio then make sure that you have the required version of numpy installed. If you do not: install numpy *first*, and then install fitsio. Do not run the command <code>pip install numpy fitiso</code>, as pip will check the dependencies of both before installing, thus returning an error. Do <code>pip install numpy</code> and *then* <code>pip install fitsio</code>.
 
-## Usage
+## Usage/Preliminary task
 
 <pre><code>
 import pypeira.pypeira as pype
