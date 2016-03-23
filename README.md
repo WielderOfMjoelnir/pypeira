@@ -2,7 +2,8 @@
 
 ## Description
 My attempt at reducing images from the SSC into ultra high-precision time-resolved photometry.
-**NOTE:** I had to change it quite a bit recently, so some documentation (almost everything about FITS objects)
+
+**Note:** I had to change it quite a bit recently, so some documentation (almost everything about FITS objects)
 might not be correct. Will change this as soon as I have time.
 
 ## Installation
@@ -16,6 +17,8 @@ Then <code>cd</code> into the project folder and run the command
 <pre><code>python setup.py install</code></pre>
 
 You *should* then be able to import <code>pypeira</code> as you normal.
+
+**Note:** If you're having trouble installing fitsio then make sure that you have the required version of numpy installed. If you do not: install numpy *first*, and then install fitsio. Do not run the command <code>pip install numpy fitiso</code>, as pip will check the dependencies of both before installing, thus returning an error. Do <code>pip install numpy</code> and *then* <code>pip install fitsio</code>.
 
 ## Usage
 
