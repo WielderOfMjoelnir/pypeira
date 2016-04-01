@@ -10,7 +10,7 @@ might not be correct. Most of this should be fixed by now.
 
 First clone the project
 
-<pre><code>git https://github.com/WielderOfMjoelnir/pypeira.git</code></pre>
+<pre><code>git clone https://github.com/WielderOfMjoelnir/pypeira.git</code></pre>
 
 Then <code>cd</code> into the project folder and run the command
 
