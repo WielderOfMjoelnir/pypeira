@@ -3,8 +3,8 @@
 ## Description
 My attempt at reducing images from the SSC into ultra high-precision time-resolved photometry.
 
-**Note:** I had to change it quite a bit recently, so some documentation (almost everything about FITS objects)
-might not be correct. Will change this as soon as I have time.
+**Note:** I had to change it quite a bit recently, so some documentation
+might not be correct. Most of this should be fixed by now.
 
 ## Installation
 
