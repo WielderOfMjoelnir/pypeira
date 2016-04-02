@@ -109,23 +109,29 @@ def pixel_data(idx, hdus, zipped=False):
     # Conversion from secs to BMJD
     sec_to_day = 1 / (3600 * 24)
 
+    # Dimension of data cube / number of images in data cube - normally 64
+    # Assuming same dimension for all data cubes
+    dims = hdus[0].ndims[0]
+
     # Prove the first HDU to get the total number of entries needed
     # Assuming all HDUs to have the same dimensions
-    pix_vals = np.empty(hdus[0].ndims[0] * len(hdus))
-    times = np.empty(hdus[0].ndims[0] * len(hdus))
+    pix_vals = np.empty(dims * len(hdus))
+    times = np.empty(dims * len(hdus))
 
     # Sort the HDUs using the Barycenter Mod. Julian Date of the observation as key
     hdus.sort(key=lambda x: x.timestamp)
 
     # Iterate through the HDUs
-    for j in np.arange(0, len(hdus)):
+    for j in range(0, len(hdus)):
         # Array of pixel values for
-        np.put(pix_vals, np.arange(j * hdus[0].ndims[0], j * hdus[0].ndims[0] + hdus[0].ndims[0]), hdus[j].pixel_values(idx))
+        np.put(pix_vals, np.arange(j * dims, j * dims + dims), hdus[j].pixel_values(idx))
 
-        times_curr = [(hdus[j].timestamp + (hdus[j].frametime * i * sec_to_day)) for i in np.arange(0, hdus[j].ndims[0])]
+        # Assume equal time between each integration
+        time_increment = (hdus[j].integ_end - hdus[j].integ_start) / hdus[j].ndims[0]
+        times_curr = [(hdus[j].timestamp + (time_increment * i * sec_to_day)) for i in range(0, hdus[j].ndims[0])]
 
         # Array of all the timestamps, where we add i * frametime to the timestamp
-        np.put(times, np.arange(j * hdus[0].ndims[0], j * hdus[0].ndims[0] + hdus[0].ndims[0]), times_curr)
+        np.put(times, np.arange(j * dims, j * dims + dims), times_curr)
 
     if zipped:
         # Returns the two arrays zipped in (time, pix_val)-pairs

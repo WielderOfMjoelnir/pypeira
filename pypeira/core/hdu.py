@@ -35,6 +35,8 @@ class HDU(object):
         self.naxis = None           # Number of axes
         self.ndims = None           # Array of dimensions for each axis in order with greatest numbered axis first
         self.timestamp = None       # The timestamp of the observation in BMJD
+        self.integ_start = None     # Time of integration start
+        self.integ_end = None     # Time of integration end
         self.frametime = None       # Integration time for whole array
 
         # Read the file
@@ -69,6 +71,8 @@ class HDU(object):
         self.ndims = self.ndims.astype(np.dtype('int64'))
 
         self.timestamp = self.hdr.get('BMJD_OBS')
+        self.integ_start = self.hdr.get('AINTBEG')
+        self.integ_end = self.hdr.get('ATIMEEND')
         self.frametime = self.hdr.get('FRAMTIME')
 
     @property
@@ -105,7 +109,7 @@ class HDU(object):
         pix_val = np.zeros(self.ndims[0])
 
         # Iterate through the "data-layers", which is the 1st entry in ndims
-        for i in np.arange(0, self.ndims[0]):
+        for i in range(0, self.ndims[0]):
             pix_val[i] = self.img[i, pix_idx[0], pix_idx[1]]
 
         return pix_val
