@@ -22,6 +22,8 @@ You *should* then be able to import <code>pypeira</code> as you normal.
 
 ## Usage/Preliminary task
 
+Instead of the code below one can also simply run the <code>main.py</code> using the command <code>python main.py</code>. Remember to change the path in <code>main.py</code> if you want to run the scripts using different data files.
+
 <pre><code>
 import pypeira.pypeira as pype
 
